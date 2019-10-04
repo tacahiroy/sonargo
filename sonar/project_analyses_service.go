@@ -29,9 +29,12 @@ type ProjectAnalysesEventObject struct {
 }
 
 type Analysis struct {
-	Key    string   `json:"key,omitempty"`
-	Date   string   `json:"date,omitempty"`
-	Events []*Event `json:"events,omitempty"`
+	Key                         string   `json:"key,omitempty"`
+	Date                        string   `json:"date,omitempty"`
+	Events                      []*Event `json:"events,omitempty"`
+	ProjectVersion              string   `json:"projectVersion,omitempty"`
+	ManualNewCodePeriodBaseline *bool    `json:"manualNewCodePeriodBaseline,omitempty"`
+	Revision                    string   `json:"revision,omitempty"`
 }
 
 type ProjectAnalysesSearchObject struct {
